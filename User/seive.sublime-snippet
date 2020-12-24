@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+/** sieve implementation**/
+
+    ll N=1299827; // first 100008 primes;
+    vector<ll>lp(N+1,0);
+    vector<ll>pr;
+    for(ll i=2;i<=N;++i)
+    {
+        if(lp[i]==0)
+        {
+            lp[i]=i;
+            pr.push_back(i);
+        }
+        for(ll j=0;j<pr.size() and i*pr[j]<=N ;++j)
+        {
+            lp[i*pr[j]]=pr[j];
+        }
+    }
+
+
+]]></content>
+  <tabTrigger>sieve</tabTrigger>
+  <source>source.cpp</source>
+</snippet>

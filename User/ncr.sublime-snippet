@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+//calculating n_C_r();
+ll ncr(ll n, ll k) {
+    ll res = 1;
+    for (ll i = 1; i <= k; ++i)
+        res = (res*(n-k+i))/i;
+
+    return res;
+}
+
+]]></content>
+  <tabTrigger>ncr</tabTrigger>
+  <source>source.cpp</source>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+ freopen("input.txt", "r", stdin);
+   freopen("output.txt", "w", stdout);
+
+]]></content>
+  <tabTrigger>inputoutput</tabTrigger>
+  <source>source.cpp</source>
+</snippet>

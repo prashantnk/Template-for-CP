@@ -1,0 +1,22 @@
+<snippet>
+    <content><![CDATA[
+//factors in sqrt(n);
+    ll N=100000;
+    vector<vector<ll> >factors(N+1);
+    for(ll j=1;j<=N;++j)
+    {
+        for(ll x=1;x*x<=j;++x)
+         {
+            if(j%x==0)
+            {
+                factors[j].push_back(x);
+                if(j/x != x) factors[j].push_back(j/x);
+            }
+         }
+    }
+
+
+]]></content>
+  <tabTrigger>factorsinsqrtn</tabTrigger>
+  <source>source.cpp</source>
+</snippet>

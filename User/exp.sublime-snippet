@@ -1,0 +1,34 @@
+<snippet>
+    <content><![CDATA[
+
+ll biexp(ll a,ll n)
+{
+    if(n==0) return 1;
+    ll res=1;
+    while(n>0)
+    {
+        if(n%2!=0) res*=a;
+        a=a*a;
+        n=n/2;
+    }
+    return res;
+}
+ll modular_exp(ll a,ll n)
+{
+    if(n==0) return 1;
+    ll res=1;
+    while(n>0)
+    {
+        if(n%2!=0) res*=a;
+        a=(a*a)%mod;
+        n=n/2;
+        res=res%mod;
+    }
+    res=(res%mod);
+    return res;
+}
+
+]]></content>
+  <tabTrigger>exp</tabTrigger>
+  <source>source.cpp</source>
+</snippet>

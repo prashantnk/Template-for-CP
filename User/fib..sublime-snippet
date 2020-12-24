@@ -1,0 +1,16 @@
+<snippet>
+    <content><![CDATA[
+pair<ll,ll>fib(ll n)
+{
+    if(n==0) return {0,1};
+    pair<ll , ll >p=fib(n/2);
+    ll c=p.first*(2LL*p.second - p.first) ;
+    ll d=p.second*p.second + p.first*p.first;
+    if(n&1) return {d,c+d};
+    else return {c,d};
+}
+
+]]></content>
+  <tabTrigger>fib</tabTrigger>
+  <source>source.cpp</source>
+</snippet>

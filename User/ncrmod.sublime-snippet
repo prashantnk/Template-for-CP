@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+int factorial[100005];
+void StoreFactorials(int n)
+{
+	factorial[0] = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		factorial[i] =(i * factorial[i - 1])% mod;
+
+	}
+}
+int invmod(int x)
+{
+	return Power(x, mod - 2);
+}
+
+int nCr(int n, int r)
+{
+	return (factorial[n] * invmod((factorial[r] * factorial[n - r]) % mod)) % mod;
+}
+]]></content>
+  <tabTrigger>ncrmod</tabTrigger>
+  <source>source.cpp</source>
+</snippet>
